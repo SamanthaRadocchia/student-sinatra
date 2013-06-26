@@ -1,9 +1,9 @@
 require 'bundler/capistrano' # for bundler support
 
 set :application, "studentbody"
-set :repository,  "git@github.com:stevenabrooks/student-sinatra.git"
+set :repository,  "git@github.com:SamanthaRadocchia/student-sinatra.git"
 
-set :user, 'stevenabrooks'
+set :user, 'iamsamsterdam'
 set :deploy_to, "/home/#{ user }/#{ application }"
 set :use_sudo, false
 
@@ -11,8 +11,8 @@ set :scm, :git
 
 default_run_options[:pty] = true
 
-role :web, "198.211.98.18"                          # Your HTTP server, Apache/etc
-role :app, "198.211.98.18"                          # This may be the same as your `Web` server
+role :web, "192.241.134.61"                          # Your HTTP server, Apache/etc
+role :app, "192.241.134.61"                          # This may be the same as your `Web` server
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
